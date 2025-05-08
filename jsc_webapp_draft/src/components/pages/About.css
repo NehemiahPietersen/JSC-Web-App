@@ -1,0 +1,180 @@
+/* About Page Specific Styles */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.about-hero-content {
+    flex: 1;
+}
+
+.about-hero-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #f8f9fa;
+    padding: 60px 40px;
+    border-radius: 8px;
+    margin-bottom: 80px;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #004a94;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Team Section */
+.team-section {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.section-intro {
+    color: #6caccf;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid #c1dbf0;
+}
+
+.team-member h3 {
+    color: #004a94;
+    margin-bottom: 5px;
+}
+
+.position {
+    color: #6caccf;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.value-icon {
+    font-size: 2rem;
+    color: #004a94;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    color: #004a94;
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+.about-cta {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #eff0f1;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero {
+    flex-direction: column;
+    }
+    
+    .mission-stats {
+    flex-direction: column;
+    gap: 30px;
+    }
+    
+    .team-member {
+    padding: 20px;
+    }
+}

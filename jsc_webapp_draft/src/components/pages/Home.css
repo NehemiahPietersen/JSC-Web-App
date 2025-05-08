@@ -1,0 +1,174 @@
+/* Base Styles */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    padding: 40px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #004a94;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #6caccf;
+    margin-bottom: 30px;
+}
+
+/* Services Section */
+.services-section {
+    margin-bottom: 80px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    padding: 20px 20px 10px;
+    color: #004a94;
+}
+
+.service-card p {
+    padding: 0 20px 20px;
+    color: #555;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #c1dbf0;
+    padding: 60px 40px;
+    border-radius: 8px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #333;
+}
+
+.client-name {
+    font-weight: 600;
+    color: #004a94;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #eff0f1;
+    border-radius: 8px;
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+.primary {
+    background-color: #004a94;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #003366;
+}
+
+.secondary {
+    background-color: transparent;
+    color: #004a94;
+    border: 2px solid #004a94;
+}
+
+.secondary:hover {
+    background-color: #004a94;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+    flex-direction: column;
+    }
+    
+    .hero-content {
+    order: 2;
+    text-align: center;
+    }
+    
+    .hero-cta {
+    justify-content: center;
+    }
+    
+    h1 {
+    font-size: 2.2rem;
+    }
+}
