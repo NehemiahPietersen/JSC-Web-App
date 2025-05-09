@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -25,6 +26,11 @@ const Navbar = () => {
         document.body.className = newTheme ? 'dark-theme' : 'light-theme';
     };
 
+    // Close mobile menu when clicking a link
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <nav className={`navbar ${isDarkTheme ? "dark" : "light"}`}>
             <div className="navbar-container">
@@ -41,31 +47,58 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <ul className={`nav-menu ${isMobileMenuOpen ? "active" : ""}`}>
                     <li className="nav-item">
-                    <a href="/" className="nav-links">
+                        <NavLink to="/"  className={({ isActive }) => `nav-links ${isActive ? "active" : ""}`}
+                        onClick={closeMobileMenu}
+                        end
+                        >
                         Home
-                    </a>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="#about" className="nav-links">
+                        <NavLink 
+                        to="/about" 
+                        className={({ isActive }) => 
+                            `nav-links ${isActive ? "active" : ""}`
+                        }
+                        onClick={closeMobileMenu}
+                        >
                         About
-                    </a>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="#products" className="nav-links">
+                        <NavLink 
+                        to="/products" 
+                        className={({ isActive }) => 
+                            `nav-links ${isActive ? "active" : ""}`
+                        }
+                        onClick={closeMobileMenu}
+                        >
                         Products
-                    </a>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="#blog" className="nav-links">
+                        <NavLink 
+                        to="/blog" 
+                        className={({ isActive }) => 
+                            `nav-links ${isActive ? "active" : ""}`
+                        }
+                        onClick={closeMobileMenu}
+                        >
                         Blog
-                    </a>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="#contact" className="nav-links">
+                        <NavLink 
+                        to="/contact" 
+                        className={({ isActive }) => 
+                            `nav-links ${isActive ? "active" : ""}`
+                        }
+                        onClick={closeMobileMenu}
+                        >
                         Contact
-                    </a>
+                        </NavLink>
                     </li>
-                </ul>
+                    </ul>
 
                 <button className="theme-toggle" onClick={toggleTheme}>
                     {isDarkTheme ? "☀︎" : "⏾"}
